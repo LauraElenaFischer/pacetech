@@ -1,0 +1,14 @@
+algoritmo "calculoSalario"
+// Função : Calcular o aumneot de 30% no salario informado
+// Autor : Laura Elena Fischer
+// Data : 25/02/2022
+// Seção de Declarações 
+var
+     salario, resultado : real
+inicio
+// Seção de Comandos 
+escreval (" informe o salario")
+    leia ( salario)
+    resultado <- 1.30 * salario
+
+fimalgoritmo
