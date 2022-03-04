@@ -1,0 +1,63 @@
+algoritmo "Viagem e temperatura"
+// Função : Converter temperatura e converter moeda
+// Autor : Laura Elena Fischer
+// Data : 03/03/2022
+// Seção de Declarações 
+var
+  temperaturaCelsius, temperaturaFahrenheit : real
+  alternativa : literal
+  Dolares, Reais, Cotacao : real
+inicio
+// Seção de Comandos 
+    escreval(" 1 para converter temperatura de Celsius para Fahrenheit")
+    escreval(" 2 para converter temperatura de Fahrenheit para Celsius")
+    escreval(" 3 para converter Dolar para Reais")
+    escreval(" 4 para converter Reais para Dolar")
+    escreva("Informe qual alternativa deseja: ")
+
+    leia (alternativa)
+
+    escolha alternativa
+    
+
+        caso "1"
+            escreval("Informe a temperatura em graus Celsius: ")
+            leia (temperaturaCelsius)
+            temperaturaFahrenheit <- 1,8 * temperaturaCelsius + 32
+            escreval(temperaturaCelsius, "ºC equivale(m) a" , temperaturaFahrenheit:2:2, "ºF.")
+
+
+        caso "2"
+            escreval("Informe a temperatura em graus Fahrenheit: ")
+            leia(temperaturaFahrenheit)
+            temperaturaCelsius <- (temperaturaFahrenheit - 32) / 1,8
+            escreval(temperaturaFahrenheit, "ºF equivale(m) a" , temperaturaCelsius:2:2, "ºC.")
+
+        caso "3"
+            escreval (" informe a cotacao do Dolar atual")
+            leia (cotacao)
+            Escreval (" informe quantos Dolares você quer converter")
+            leia (Dolares)
+            Reais <- cotacao *  Dolares
+             escreval("O valor em reais é de: R$",Reais:3:2)
+             
+         caso "4"
+            escreval (" informe a cotacao do Dolar atual")
+            leia (cotacao)
+            Escreval (" informe quantos Reais você quer converter")
+            leia (Reais)
+            Dolares <- Reais/cotacao
+            escreval("O valor em Dolares é de: US$",Dolares:3:2)
+            
+Escreval (" Obrigada por usar nosso programa ;)  ")
+             
+        outrocaso
+           limpatela
+           escreval()
+           escreval("Erro! Informe uma alternativa do menu...")
+
+
+    fimescolha
+    
+    
+fimalgoritmo
