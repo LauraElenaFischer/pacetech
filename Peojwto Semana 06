@@ -1,0 +1,90 @@
+/* Autor: Laura Elena Fischer 
+ * Função: Converter moeda e temperatura 
+ */
+package ProjetoSemana06;
+
+/**
+ *
+ * @author d3m0n
+ */
+public class Principal {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
+    
+}
+float cotacaoDolar;
+        float tempCelsius =  0 ;
+        float tempFahrenheit =  0 ;
+        float valorReais =  0 ;
+        float valorDolares =  0 ;
+        char opcao;
+        char continuar =  ' s ' ;
+        
+        Scanner leitor =  novo  Scanner ( System . in);
+        
+        Sistema . fora . println( " Olá! Bem vindo ao Converty  " );
+        Sistema . fora . print( " Informe a cotação do Dólar " );
+        cotacaoDolar = leitor . próximoFloat();
+        
+        while (continuar ==  ' S '  || continuar ==  ' s ' ){
+            Sistema . fora . println( "                MENU               " );
+            Sistema . fora . println( " 1 - Temperatura: Celsius para Fahrenheit  " );
+            Sistema . fora . println( " 2 - Temperatura: Fahrenheit para Celsius  " );
+            Sistema . fora . println( " 3 - Moeda: Reais  para Dólar  " );
+            Sistema . fora . println( " 4 - Moeda: Dólar para Reais " );
+          
+          
+            Sistema . fora . print( " Informe a opção que deseja: " );
+        
+            opcao = leitor . próximo() . charAt( 0 );
+            
+            switch (opcao){
+                
+                caso  ' 1 ' :
+                    Sistema . fora . print( " Informe a temperatura em Celsius: " );
+                    tempCelsius = leitor . nextInt();
+                    tempFahrenheit =  1.8f  * tempCelsius +  32 ;
+                    Sistema . fora . println( " temperatura ==> Resultado: "  + tempCelsius +  " ºC equivale(m) a "  + tempFahrenheit +  " ºF. " );
+                    quebrar ;
+                    
+                caso  ' 2 ' :
+                    Sistema . fora . print( " Informe a temperatura em ºFahrenheit: " );
+                    tempFahrenheit = leitor . nextInt();
+                    tempCelsius = ( tempFahrenheit -  32 ) /1.8f  ;
+                    Sistema . fora . println( " Temperatura ==> Resultado: "  + tempFahrenheit +  " ºF equivale(m) a "  + tempCelsius +  " ºC. " );
+                    quebrar ;
+                    
+                caso  ' 3 ' :
+                    Sistema . fora . print( " Informe o valor em Reais(R$): " );
+                    valorReais = leitor . próximoFloat();
+                    valorDolares = valorReais / cotacaoDolar;
+                    Sistema . fora . println( " Dolar ==> Resultado: R$ "  + valorReais +  " equivale(m) a US$ "  + valorDolares + 
+                    " conforme a cotação informada. " );
+                    quebrar ;
+                    
+                caso  ' 4 ' :
+                    Sistema.fora.print( " Informe o valor em Dólares(US$): " );
+                    valorDolares = leitor . próximoFloat();
+                    valorReais = valorDolares * cotacaoDolar;
+                    Sistema . fora . println( " Reais ==> Resultado: US$ "  + valorDolares +  " equivale(m) a R$ "  + valorReais + 
+                    " conforme a cotação informada. " );
+                    quebrar ;
+                                        
+                padrão:
+                    Sistema . fora . println( " opção ==> Erro! Informe uma opção do menu ... " );
+                  
+            }   // troca de fim
+            Sistema . fora . print( "  Deseja fazer outra conversão? (S - sim / N - não): " );
+            seguir = leitor . próximo() . charAt( 0 );
+        }   // fim enquanto
+        
+        Sistema . fora . println( " Desejamos uma boa viagem  " );
+    }
+}
+       
+       
